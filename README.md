@@ -39,6 +39,17 @@ This engine uses a **rolling baseline model** per user:
 
 ---
 
+## 🔍 Why This Matters
+
+Traditional identity detections often trigger on single signals (e.g. new country or impossible travel), which can lead to high false positive rates.
+
+This engine focuses on:
+- Correlating multiple weak signals into high-confidence alerts
+- Tracking behavioural baselines per user
+- Prioritising context over isolated anomalies
+
+This allows for more meaningful alerts and reduced noise.
+
 ## 📊 Example Output
 
 ### Alerts (JSON)
