@@ -41,6 +41,19 @@ This engine uses a **rolling baseline model** per user:
 
 ## 🔍 Why This Matters
 
+## 🧪 Example Attack Scenario
+
+This dataset represents a potential account compromise:
+
+1. User signs in from a known location (baseline behaviour)
+2. A new login occurs from a different country, ASN, and device
+3. The same session is reused across a device change
+4. MFA settings are modified
+5. A mailbox rule is created (possible data exfiltration)
+
+Individually, these signals may not indicate compromise.  
+When correlated, they form a high-confidence attack chain.
+
 Traditional identity detections often trigger on single signals (e.g. new country or impossible travel), which can lead to high false positive rates.
 
 This engine focuses on:
